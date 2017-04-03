@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>PicClock Beta 2.3.0</title>
+
+<style>
+.button {
+    background:url(btn.png) no-repeat;
+    color:bbbbbb;
+    font-family:calibri;
+    font-size:11pt;
+    cursor:pointer;
+    width: 110px;
+    height: 30px;
+    border: none;
+    text-shadow: 0.1em 0.1em #000
+}
+a{
+  text-decoration:none;
+  color:black;
+  font-family:calibri;
+  font-size:11pt;
+  text-shadow: 0.1em 0.1em #ccc
+}
+span{
+  color:black;
+  font-family:calibri;
+  font-size:11pt;
+  text-shadow: 0.1em 0.1em #ccc
+}
+select {
+   width:145px;	
+}
+  
+</style>
+
+	
+</head>
+<body bgcolor="ffffff"><center>
+
+<table width="250" height="300" border="0">
+<tr><td colspan="2"><center><img src="picclock.png"></center></td></tr>
+	
+	
+<tr><td colspan="2"><center>
+	<!-- First, include the JPEGCam JavaScript Library -->
+	<script type="text/javascript" src="webcam.js"></script>
+	
+	<!-- webcam parameters -->
+	<script language="JavaScript" src="webcampara.js"></script>
+	
+	<!-- Calling the webcam view  -->
+	<script language="JavaScript" src="webcamcall.js"></script>
+	
+	
+	</center>
+</td></tr></table>
+	<form action="clock_in.php" method="post">
+	<table width="250" height="150" border="0">
+	<tr><td>
+	<span id="login"><center>Username:</center></span></td><td><input type=text name="username"></td></tr>
+	<tr><td>
+	<span id="login"><center>Password:</center></span></td><td><input type=password name="password"></td></tr>
+	<tr><td><center><span>Clock In/Out:</span></center></td><td><center>
+	<select name="clockit">
+  		<option value="1">IN</option>
+  		<option value="2">Lunch Out</option>
+  		<option value="3">Lunch In</option>
+  		<option value="4">Out</option>
+	</select> </center>
+	</td></tr>
+	<tr><td><center>	
+	<input class="button" type=button src="btn.png" value="Configure" onClick="webcam.configure()"></center></td>
+	<td><center>
+		<input class="button" type=button src="btn.png" value="Submit" onClick="take_snapshot(); return false;" /></center></td></tr>
+		</table>
+		<div id="upload_results"></div>
+		<div id="confirmation"></div>
+	
+	</form>
+	
+	<a href="admin.php">Admin Panel</a>
+	
+	<!-- Code to handle the server response (see test.php) -->
+	<!----Make into its own js file --->
+	<script language="JavaScript" src="webcamhook.js"></script>
+	
+</center>
+</body>
+</html>

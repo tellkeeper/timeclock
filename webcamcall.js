@@ -1,0 +1,1 @@
+document.write( webcam.get_html(320, 240) );
