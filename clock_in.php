@@ -32,7 +32,7 @@ mysql_query($query,$con);
 <br /><br />
 <center>
 <img src="picclock.png"><br />
-<center><span>_______________________________________________________________________________________________</span></center><br />
+<hr>
 <span>Thank you <?php echo $firstname ?>, your time has been logged.</span>
 </body>
 </html>
