@@ -1,8 +1,5 @@
 <?php
-$db_host = "localhost";
-$db_user = "timeclock1";
-$db_pass = "clockin";
-$db_name = "timeclock";
+
 $con = mysql_connect($db_host, $db_user, $db_pass) or die(mysql_error());
 mysql_select_db($db_name);
 //establish variables
